@@ -1,6 +1,6 @@
 services:
   fastapi:
-    image: pnapat/fastapi:dev
+    image: pnapat/fastapi-review:dev
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,7 +8,7 @@ services:
       - 8000:8000
 
   streamlit:
-    image: pnapat/streamlit:dev
+    image: pnapat/streamlit-review:dev
     build:
       context: ./streamlit_app
       dockerfile: Dockerfile
