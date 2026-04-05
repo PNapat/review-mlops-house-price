@@ -57,7 +57,7 @@ def main(args):
 
     if args.mlflow_tracking_uri:
         mlflow.set_tracking_uri(args.mlflow_tracking_uri)
-        mlflow.set_experiment(model_cfg['name'])
+        mlflow.set_experiment('Review_'+model_cfg['name'])       #Added for review version
 
     # Load data
     data = pd.read_csv(args.data)

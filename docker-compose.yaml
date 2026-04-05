@@ -14,5 +14,5 @@ services:
       dockerfile: Dockerfile
     ports: 
       - 8501:8501
-    environment:
-      API_URL: http://fastapi:8000
+    environment:  # Environment variables inside the container
+      API_URL: http://fastapi:8000   # other containers can reach it by this name (send request to here)
