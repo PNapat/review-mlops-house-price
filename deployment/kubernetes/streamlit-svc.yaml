@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: streamlit
-  name: streamlit
+    app: streamlit-review
+  name: streamlit-review
 spec:
   ports:
   - name: "8501"
@@ -12,7 +12,7 @@ spec:
     protocol: TCP
     targetPort: 8501
   selector:
-    app: streamlit
+    app: streamlit-review
   type: NodePort
 status:
   loadBalancer: {}
