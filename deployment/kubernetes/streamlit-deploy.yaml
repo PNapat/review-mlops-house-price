@@ -2,22 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: streamlit-review
-  name: streamlit-review
+    app: streamlit
+  name: streamlit
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: streamlit-review
+      app: streamlit
   strategy: {}
   template:
     metadata:
       labels:
-        app: streamlit-review
+        app: streamlit
     spec:
       containers:
-      - image: pnapat/streamlit-review:v3
-        name: streamlit-review
+      - image: pnapat/streamlit:v5
+        imagePullPolicy: Always
+        name: streamlit
         ports:
         - containerPort: 8501
         resources: {}

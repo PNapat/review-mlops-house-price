@@ -16,7 +16,7 @@ spec:
         app: model
     spec:
       containers:
-      - image: pnapat/house-price-model:latest
+      - image: pnapat/review-house-price-model:latest
         name: house-price-model
         ports:
         # - containerPort: 8000
