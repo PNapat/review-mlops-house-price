@@ -35,7 +35,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize and instrument Prometheus metrics (selfnote: automate "/matrics" for monitoring)
+# Initialize and instrument Prometheus metrics (selfnote: automate "/metrics" for monitoring)
 Instrumentator().instrument(app).expose(app) #ADDED FOR PROMETHEUS INTEGRATION
 
 # Start prometheus metrics server on port 9100 in a background thread (selfnote: this allows Prometheus to scrape metrics without blocking the main application)
